@@ -1,0 +1,17 @@
+/media/hdd/code/weatherConsoleApp/bin/Debug/net6.0/weatherConsoleApp
+/media/hdd/code/weatherConsoleApp/bin/Debug/net6.0/weatherConsoleApp.deps.json
+/media/hdd/code/weatherConsoleApp/bin/Debug/net6.0/weatherConsoleApp.runtimeconfig.json
+/media/hdd/code/weatherConsoleApp/bin/Debug/net6.0/weatherConsoleApp.dll
+/media/hdd/code/weatherConsoleApp/bin/Debug/net6.0/ref/weatherConsoleApp.dll
+/media/hdd/code/weatherConsoleApp/bin/Debug/net6.0/weatherConsoleApp.pdb
+/media/hdd/code/weatherConsoleApp/obj/Debug/net6.0/weatherConsoleApp.csproj.AssemblyReference.cache
+/media/hdd/code/weatherConsoleApp/obj/Debug/net6.0/weatherConsoleApp.GeneratedMSBuildEditorConfig.editorconfig
+/media/hdd/code/weatherConsoleApp/obj/Debug/net6.0/weatherConsoleApp.AssemblyInfoInputs.cache
+/media/hdd/code/weatherConsoleApp/obj/Debug/net6.0/weatherConsoleApp.AssemblyInfo.cs
+/media/hdd/code/weatherConsoleApp/obj/Debug/net6.0/weatherConsoleApp.csproj.CoreCompileInputs.cache
+/media/hdd/code/weatherConsoleApp/obj/Debug/net6.0/weatherConsoleApp.dll
+/media/hdd/code/weatherConsoleApp/obj/Debug/net6.0/ref/weatherConsoleApp.dll
+/media/hdd/code/weatherConsoleApp/obj/Debug/net6.0/weatherConsoleApp.pdb
+/media/hdd/code/weatherConsoleApp/obj/Debug/net6.0/weatherConsoleApp.genruntimeconfig.cache
+/media/hdd/code/weatherConsoleApp/bin/Debug/net6.0/Newtonsoft.Json.dll
+/media/hdd/code/weatherConsoleApp/obj/Debug/net6.0/weatherConsoleApp.csproj.CopyComplete
