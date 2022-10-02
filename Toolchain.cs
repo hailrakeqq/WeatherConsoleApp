@@ -16,9 +16,22 @@ namespace weatherConsoleApp
             var windSpeed = json["current_weather"]["windspeed"];
             var sunrise = json["daily"]["sunrise"][0].ToString();
             var sunset = json["daily"]["sunset"][0].ToString();
-            // var precipitation = json["hourly"]["precipitation"].ToString();
-            // var relativehumidity = json["hourly"]["relativehumidity_2m"].ToString();
+            // var precipitation = json["hourly"]["precipitation"].Value<JArray>("precipitation").Children<JObject>(); ;
+            // var relativehumidity = json["hourly"]["relativehumidity_2m"].Value<JArray>("relativehumidity_2m").Children<JObject>();
             var time = json["current_weather"]["time"];
+
+
+            // var whatRec = json.Value<JArray>("relativehumidity_2m").Children<JObject>();
+            // foreach (var obj in whatRec)
+            // {
+            //     foreach (var prop in obj.Properties())
+            //     {
+            //         Console.WriteLine(prop.Name);
+            //         Console.WriteLine(prop.Value);
+            //         Console.WriteLine();
+            //     }
+            // }
+
 
             string[] sunriseTime = ParseTime(sunrise);
             string[] sunsetTime = ParseTime(sunset);
@@ -36,13 +49,8 @@ namespace weatherConsoleApp
             Console.WriteLine($"Time: {time}");
             Console.WriteLine("\n----------------------------------------------------------------------------------------------------");
         }
-        public static double GetMediumValue(string Array)
+        public static double GetMediumValue(double[] array)
         {
-            double[] array = new double[Array.Length];
-
-            for (int x = 0; x < Array.Length; x++)
-                array[x] = Convert.ToDouble(Array[x]);
-
             double sumArray = 0;
             for (int i = 0; i < array.Length; i++)
                 sumArray += array[i];
