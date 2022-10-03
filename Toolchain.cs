@@ -5,6 +5,13 @@ namespace weatherConsoleApp
     using Newtonsoft.Json.Linq;
     public class Toolchain
     {
+        public static T[] JTokenToArray<T>(JToken jToken)
+        {
+            List<T> ret = new List<T>();
+            foreach (JToken jItem in jToken)
+                ret.Add(jItem.Value<T>());
+            return ret.ToArray();
+        }
         public static void RequestHandler(string Timezone)
         {
             var request = new GetRequest($"https://api.open-meteo.com/v1/forecast?latitude=50.4422&longitude=30.5348&hourly=temperature_2m,relativehumidity_2m,rain&daily=weathercode,sunrise,sunset&current_weather=true&timezone={Timezone}");
@@ -16,9 +23,14 @@ namespace weatherConsoleApp
             var windSpeed = json["current_weather"]["windspeed"];
             var sunrise = json["daily"]["sunrise"][0].ToString();
             var sunset = json["daily"]["sunset"][0].ToString();
-            // var precipitation = json["hourly"]["precipitation"].Value<JArray>("precipitation").Children<JObject>(); ;
-            // var relativehumidity = json["hourly"]["relativehumidity_2m"].Value<JArray>("relativehumidity_2m").Children<JObject>();
+            //var precipitation = json["hourly"]["precipitation"]; //.Value<JArray>("precipitation"); json.Value<JArray>("precipitation").Children<JObject>();
+            double[] precipitation = JTokenToArray<double>(json.Value<JToken>("precipitation"));
+            //var precipitationArray = JArray.Parse(precipitation);
+            //var relativehumidity = json.Value<JArray>("relativehumidity_2m").Children<JObject>();//json["hourly"]["relativehumidity_2m"].Value<JArray>("relativehumidity_2m");
             var time = json["current_weather"]["time"];
+
+            Console.WriteLine(precipitation);
+
 
 
             // var whatRec = json.Value<JArray>("relativehumidity_2m").Children<JObject>();
@@ -36,15 +48,15 @@ namespace weatherConsoleApp
             string[] sunriseTime = ParseTime(sunrise);
             string[] sunsetTime = ParseTime(sunset);
 
-            // double precipitationMedium = GetMediumValue(precipitation);
-            // double relativehumidityMedium = GetMediumValue(relativehumidity);
+            double precipitationMedium = GetMediumValue(precipitation);
+            //double relativehumidityMedium = GetMediumValue(relativehumidity);
 
             Console.WriteLine("----------------------------------------------------------------------------------------------------\n");
             Console.WriteLine($"Timezone: {timezone}");
             Console.WriteLine($"Temperature: {temperature} °C");
             Console.WriteLine($"Wind speed: {windSpeed} km/h");
             Console.WriteLine($"Sunrise: {sunriseTime[1]} | Sunset: {sunsetTime[1]}");
-            // Console.WriteLine($"Precipitation: {precipitationMedium} mm");
+            Console.WriteLine($"Precipitation: {precipitationMedium} mm");
             // Console.WriteLine($"Relativehumidity: {relativehumidityMedium} %");
             Console.WriteLine($"Time: {time}");
             Console.WriteLine("\n----------------------------------------------------------------------------------------------------");
