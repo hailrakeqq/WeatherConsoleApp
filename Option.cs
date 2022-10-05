@@ -1,4 +1,4 @@
-namespace weatherConsoleApp
+namespace WeatherConsoleApp
 {
     using System.Net;
     using Newtonsoft.Json.Linq;
@@ -17,7 +17,7 @@ namespace weatherConsoleApp
             Console.Write("Found Weather for (Region City): ");
             try
             {
-                string searchData = Console.ReadLine();
+                string? searchData = Console.ReadLine();
                 string[] splitResult = searchData.Split();
                 string result = (String.Join("%2F", splitResult));
 

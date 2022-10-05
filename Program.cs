@@ -1,26 +1,26 @@
-﻿namespace weatherConsoleApp
+﻿namespace WeatherConsoleApp
 {
     class Program
     {
         public static void BackToMainMenu()
         {
             Console.Write("It's all?(Y/n): ");
-            string answer = Console.ReadLine();
+            string? answer = Console.ReadLine();
             if (answer == "\n" || answer == "y") Main();
         }
 
         public static void Main()
         {
-            string chooseOption;
+            string? chooseOption;
             do
             {
                 Console.WriteLine("\n\t\t\t\tWelcome to Weather Console App\n\n");
-                Console.WriteLine("Choose option(type anything for exit): \n1 -> Weather in your city\n2 -> Found weather for...");
+                Console.WriteLine("Choose option(type anything for exit): \n1 -> Weather in your city\n2 -> Found weather for...\n3 -> test Json");
 
                 chooseOption = Console.ReadLine();
 
                 Controller.ChooseOption(chooseOption);
-            } while (chooseOption == "1" || chooseOption == "2");
+            } while (chooseOption == "1" || chooseOption == "2" || chooseOption == "3");
         }
     }
 }

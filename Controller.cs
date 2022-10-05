@@ -1,4 +1,4 @@
-namespace weatherConsoleApp
+namespace WeatherConsoleApp
 {
     public class Controller
     {
@@ -14,6 +14,9 @@ namespace weatherConsoleApp
                     break;
                 case "2":
                     Option.FoundWeatherFor();
+                    break;
+                case "3":
+                    Toolchain.TestJson();
                     break;
             }
         }
