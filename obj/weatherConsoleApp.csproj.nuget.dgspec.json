@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "/home/hailrake/code/WeatherConsoleApp/weatherConsoleApp.csproj": {}
+    "/media/hdd/code/WeatherConsoleApp/weatherConsoleApp.csproj": {}
   },
   "projects": {
-    "/home/hailrake/code/WeatherConsoleApp/weatherConsoleApp.csproj": {
+    "/media/hdd/code/WeatherConsoleApp/weatherConsoleApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/hailrake/code/WeatherConsoleApp/weatherConsoleApp.csproj",
+        "projectUniqueName": "/media/hdd/code/WeatherConsoleApp/weatherConsoleApp.csproj",
         "projectName": "weatherConsoleApp",
-        "projectPath": "/home/hailrake/code/WeatherConsoleApp/weatherConsoleApp.csproj",
-        "packagesPath": "/home/hailrake/.nuget/packages/",
-        "outputPath": "/home/hailrake/code/WeatherConsoleApp/obj/",
+        "projectPath": "/media/hdd/code/WeatherConsoleApp/weatherConsoleApp.csproj",
+        "packagesPath": "/home/desktop/.nuget/packages/",
+        "outputPath": "/media/hdd/code/WeatherConsoleApp/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/home/hailrake/.nuget/NuGet/NuGet.Config"
+          "/home/desktop/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
@@ -53,12 +53,18 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[6.0.9, 6.0.9]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/lib64/dotnet/sdk/6.0.108/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/6.0.109/RuntimeIdentifierGraph.json"
         }
       }
     }
